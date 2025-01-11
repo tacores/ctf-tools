@@ -1,6 +1,8 @@
 # ctf-tools
 Catch The Flag 用に作った、あったら便利なツール群
 
+## デコード
+
 ### モールス信号 (morse.py)
 モールス信号を復号する
 ```shell
@@ -24,3 +26,32 @@ bcd!efg
 cdefgh
 def#ghi
 ```
+
+### HEX→ASCII変換（hex2str.py）
+
+16進数値の文字列を、2桁ずつASCII文字と解釈してASCII文字列に変換する。
+
+```shell
+$ python ./hex2str.py 414243
+ABC
+```
+
+### Vigenere暗号のキー検索
+
+暗号化文字列と元の文字列が分かっている場合に、キーを割り出すスクリプト。  
+文字数が1対1であり、アルファベット文字のみ暗号化されるため、元の文字列を部分的に推測しやすい。  
+文字列とワードファイルをスクリプト内の変数で指定する。
+
+```shell
+python ./vigenere_findkey.py
+```
+
+## 攻撃スクリプト
+
+### One Time Password 攻撃（otp_attack.py）
+多要素認証の4桁のワンタイムパスワードを攻撃するスクリプト。  
+サイトの仕様に合わせてコードをカスタマイズする必要がある。
+```shell
+python ./otp_attack.py
+```
+
