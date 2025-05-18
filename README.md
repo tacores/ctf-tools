@@ -46,6 +46,15 @@ ABC
 python ./vigenere_findkey.py
 ```
 
+### id_rsa.pub から id_rsa を生成
+
+通常は時間がかかりすぎて使えるものではないが、p と q が非常に近く、
+ユークリッドアルゴリズムで高速に素因数分解できる場合に限り使える。
+
+```shell
+python ./gen_private_from_public.py
+```
+
 ## 攻撃スクリプト
 
 ### One Time Password 攻撃（otp_attack.py）
