@@ -55,6 +55,12 @@ python ./vigenere_findkey.py
 python ./gen_private_from_public.py
 ```
 
+### sqlmap の bool ベース攻撃のリクエストログからデータ復元
+
+```shell
+python ./sqlmap_log_recover.py
+```
+
 ## 攻撃スクリプト
 
 ### One Time Password 攻撃（otp_attack.py）
