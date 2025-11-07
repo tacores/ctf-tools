@@ -1,5 +1,6 @@
 # ctf-tools
-Catch The Flag 用に作った、あったら便利なツール群
+
+Capture The Flag 用に作った、あったら便利なツール群
 
 ## デコード
 
@@ -86,4 +87,20 @@ IPアドレスとポート番号のリストを、シェルファイル内で設
 
 ```shell
 ./port_knock.sh
+```
+
+### blind-SQLi
+
+- CSRF無効
+- PHPSESSID固定
+- 応答コード302 のときTrue
+
+という単純な環境でDBをダンプするスクリプト。  
+汎用的とは言い難いが、パターンのインクリメントやループ方法などは参考になる。
+
+```shell
+python find_dbname.py
+python find_tablenames.py
+python find_columnnames.py
+python dump_tabledata.py
 ```
